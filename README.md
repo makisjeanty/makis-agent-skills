@@ -19,6 +19,8 @@ Reusable local skill repository for Codex and Agent Skills-compatible coding age
   Ordered playbooks for common work patterns.
 - `scripts/sync-to-codex.ps1`
   Copies all repository skills into `~/.codex/skills`.
+- `scripts/validate-skills.py`
+  Validates skill frontmatter and required files for CI and local checks.
 
 ## Install or sync to Codex
 
@@ -29,3 +31,13 @@ powershell -ExecutionPolicy Bypass -File .\scripts\sync-to-codex.ps1
 ```
 
 Then restart Codex so newly installed or updated skills are picked up.
+
+## Validate locally
+
+Run:
+
+```powershell
+python .\scripts\validate-skills.py
+```
+
+The same validation runs in GitHub Actions on push and pull request.
