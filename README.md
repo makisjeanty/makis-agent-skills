@@ -21,6 +21,8 @@ Reusable local skill repository for Codex and Agent Skills-compatible coding age
   Copies all repository skills into `~/.codex/skills`.
 - `scripts/validate-skills.py`
   Validates skill frontmatter and required files for CI and local checks.
+- `scripts/validate-markdown-links.py`
+  Validates relative Markdown links so skill docs and references do not drift.
 
 ## Install or sync to Codex
 
@@ -38,6 +40,7 @@ Run:
 
 ```powershell
 python .\scripts\validate-skills.py
+python .\scripts\validate-markdown-links.py
 ```
 
-The same validation runs in GitHub Actions on push and pull request.
+The same validations run in GitHub Actions on push and pull request.
