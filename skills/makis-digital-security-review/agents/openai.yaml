@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Security Review"
+  short_description: "PHP security review and hardening"
+  default_prompt: "Use $makis-digital-security-review to review or harden this makis-digital change for validation, CSRF, auth, output escaping, and safe error handling."

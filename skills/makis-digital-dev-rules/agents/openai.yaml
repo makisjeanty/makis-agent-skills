@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Dev Rules"
+  short_description: "Secure modular PHP delivery rules"
+  default_prompt: "Use $makis-digital-dev-rules to implement or refactor this makis-digital task with modular architecture, security, and tests."

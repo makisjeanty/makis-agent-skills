@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital CRUD Refactor"
+  short_description: "Incremental CRUD cleanup for PHP"
+  default_prompt: "Use $makis-digital-crud-refactor to refactor this makis-digital CRUD module with thin controllers, services, repositories, and safe tests."

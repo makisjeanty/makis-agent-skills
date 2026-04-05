@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Test-First Bugfix"
+  short_description: "Regression fixes with tests first"
+  default_prompt: "Use $makis-digital-test-first-bugfix to reproduce this bug with a failing test first, then implement the smallest safe fix."
