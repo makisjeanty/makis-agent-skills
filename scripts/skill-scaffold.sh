@@ -43,6 +43,9 @@ if [ -d "$SKILL_DIR" ]; then
   exit 1
 fi
 
+# Remove partially created directory if any subsequent step fails
+trap 'rm -rf "$SKILL_DIR"' ERR
+
 if [ -z "$DESCRIPTION" ]; then
   DESCRIPTION="Description for $SKILL_NAME"
 fi
@@ -52,10 +55,13 @@ mkdir -p "$SKILL_DIR/agents"
 mkdir -p "$SKILL_DIR/references"
 mkdir -p "$SKILL_DIR/references/knowledge"
 
-# Copy shared knowledge files from dev-rules
+# Copy shared knowledge files from dev-rules (only if source files exist)
 KNOWLEDGE_SOURCE="$REPO_ROOT/skills/makis-digital-dev-rules/references/knowledge"
 if [ -d "$KNOWLEDGE_SOURCE" ]; then
-  cp "$KNOWLEDGE_SOURCE"/*.md "$SKILL_DIR/references/knowledge/"
+  knowledge_files=("$KNOWLEDGE_SOURCE"/*.md)
+  if [ -e "${knowledge_files[0]}" ]; then
+    cp "${knowledge_files[@]}" "$SKILL_DIR/references/knowledge/"
+  fi
 fi
 
 # Create SKILL.md

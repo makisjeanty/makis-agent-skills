@@ -36,4 +36,4 @@ jobs:
         run: sudo apt-get install -y bats
 
       - name: Run BATS tests
-        run: bats tests/test_skill_scaffold.bats tests/test_sync_scripts.bats
+        run: bats tests/test_skill_scaffold.bats tests/test_sync_scripts.bats tests/test_sync_knowledge.bats

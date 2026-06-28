@@ -52,9 +52,24 @@ skills/makis-digital-<name>/
 - [ ] All relative markdown links resolve to existing files.
 - [ ] The skill is registered in CATALOG.md and dev-rules references/skill-catalog.md.
 - [ ] `make validate-all` passes.
+- [ ] `make test` passes (any change to a script in `scripts/` must include a corresponding test).
+
+## Updating knowledge files
+
+The four shared knowledge files (`architecture-current.md`, `decisions.md`,
+`security-baseline.md`, `crud-projects-pattern.md`) live in
+`skills/makis-digital-dev-rules/references/knowledge/` and are propagated to
+all other skills. After editing them, run:
+
+```bash
+make sync-knowledge
+```
+
+Skills with a `.no-sync` marker (e.g. `makis-digital-test-first-bugfix`) have
+intentionally customised knowledge files and are skipped automatically.
 
 ## Pull request process
 
-1. Run `make validate-all` before opening a PR.
+1. Run `make validate-all && make test` before opening a PR.
 2. Keep PRs focused on one skill or logical group of changes.
 3. Reference any issues the PR addresses.
