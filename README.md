@@ -106,6 +106,21 @@ make scaffold NAME=x DESC="..."  # Scaffold a new skill
 - `.github/ISSUE_TEMPLATE/` — issue templates for skills and bugs
 - `.github/PULL_REQUEST_TEMPLATE.md` — PR template
 
+## Agents
+
+The `agents/` directory has reusable Claude Code agents. To install:
+
+```bash
+cp agents/*.md ~/.claude/agents/
+```
+
+Then restart Claude Code. The agents will appear in the agent selector.
+
+| Agent | Purpose |
+|---|---|
+| `makis-dev-agent` | Full-stack PHP dev using all 17 skills |
+| `makis-security-agent` | Security specialist for reviews and hardening |
+
 ## Validate locally
 
 Run:
