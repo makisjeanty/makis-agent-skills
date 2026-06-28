@@ -38,6 +38,8 @@
   Use for Composer workflows, version policies, and security auditing.
 - `makis-digital-idea-prompt-generator`
   Generate ideas and structured prompts for agent-central from vague goals.
+- `makis-digital-expert-researcher`
+  Research codebases, patterns, and libraries before implementing.
 
 ## Starter bundles
 
@@ -59,3 +61,5 @@
   Start with `makis-digital-deployment`, then `makis-digital-logging-observability`, then `makis-digital-dependency-management`.
 - `idea-to-feature`
   Start with `makis-digital-idea-prompt-generator`, then `makis-digital-agent-central` to execute.
+- `research-first`
+  Start with `makis-digital-expert-researcher`, then `makis-digital-agent-central` to implement.

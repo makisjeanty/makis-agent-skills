@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Expert Researcher"
+  short_description: "Specialist researcher for codebases, technologies, libraries, and architecture decisions. Investigates existing code, explores patterns, researches libraries and APIs, and produces evidence-backed recommendations before implementation. Use before any major implementation or integration decision."
+  default_prompt: "Use $makis-digital-expert-researcher to TODO."

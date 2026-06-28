@@ -40,6 +40,8 @@ This is the local catalog for reusable agent guidance in this skill repository.
   Manage Composer packages with version policies, security audits, and update workflows.
 - `makis-digital-idea-prompt-generator`
   Turn vague goals into concrete ideas and ready-to-execute prompts for agent-central.
+- `makis-digital-expert-researcher`
+  Investigate codebases, patterns, libraries, and architectures before implementing.
 
 ## Starter bundles
 
@@ -61,6 +63,8 @@ This is the local catalog for reusable agent guidance in this skill repository.
   Start with `makis-digital-deployment` for release workflow, then `makis-digital-logging-observability`, then `makis-digital-dependency-management` for audit.
 - `idea-to-feature`
   Start with `makis-digital-idea-prompt-generator` to refine the idea and build the prompt, then `makis-digital-agent-central` to execute.
+- `research-first`
+  Start with `makis-digital-expert-researcher` to investigate architecture and patterns, then `makis-digital-agent-central` to implement based on findings.
 
 ## Orchestration
 
