@@ -31,6 +31,8 @@ When starting a task, activate `makis-digital-agent-central` to analyze and rout
 | Verification | `makis-digital-verification-loop` |
 | Specifications | `makis-digital-specs` |
 | Orchestrator | `makis-digital-agent-central` |
+| Idea generation | `makis-digital-idea-prompt-generator` |
+| Research | `makis-digital-expert-researcher` |
 
 ## Delivery standards
 

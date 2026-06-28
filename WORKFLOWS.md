@@ -85,3 +85,19 @@ These workflows are ordered playbooks inspired by skill-library workflow pattern
 3. Use `makis-digital-dependency-management` to audit dependencies and run `composer audit`.
 4. Use `makis-digital-security-review` to confirm security baseline.
 5. Run `makis-digital-verification-loop` with the full checklist.
+
+## Workflow: Idea to Feature
+
+1. Activate `makis-digital-idea-prompt-generator` with the domain or goal.
+2. Select the best idea and refine it into a concrete prompt.
+3. Pass the prompt to `makis-digital-agent-central` to analyze and route the task.
+4. Follow the orchestrated skill chain produced by agent-central.
+5. Run `makis-digital-verification-loop` before closing.
+
+## Workflow: Research Before Implementation
+
+1. Activate `makis-digital-expert-researcher` with the research question.
+2. Choose depth: quick (single question), moderate (feature scope), or deep (architecture decision).
+3. Gather evidence from the codebase and, if needed, from external sources.
+4. Produce a structured report: summary, evidence, recommendation, risks.
+5. Pass the recommendation to `makis-digital-agent-central` to plan and execute implementation.
