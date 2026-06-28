@@ -3,7 +3,7 @@ name: makis-digital-idea-prompt-generator
 description: Generate project ideas, feature ideas, and structured prompts for AI coding agents. Takes a domain or context and produces multiple concrete ideas with pros/cons, then generates executable prompts ready for makis-digital-agent-central.
 license: MIT
 metadata:
-  maintainer: makis-jeanty
+  maintainer: JEANMAKISJEANTY
   version: "0.1.0"
   scope: project-and-global
   environment: Designed for Codex and Agent Skills-compatible coding agents that need to go from blank page to executable prompt.
