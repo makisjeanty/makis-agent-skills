@@ -1,0 +1,32 @@
+name: New Skill
+description: Propose a new skill for the repository
+title: "[Skill] "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill name
+      description: "e.g. makis-digital-cache-patterns"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should this skill cover?
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Expected workflow
+      description: Steps the agent should follow when using this skill.
+      placeholder: |
+        1. Step one
+        2. Step two
+  - type: textarea
+    id: references
+    attributes:
+      label: Related ECC skills or references
+      description: Any existing skills (ECC or other) that inspired this.

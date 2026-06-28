@@ -1,0 +1,21 @@
+name: Bug Report
+description: Report a broken skill, broken link, or validation failure
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: skill-name
+    attributes:
+      label: Affected file or skill
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What is broken?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior

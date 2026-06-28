@@ -51,6 +51,8 @@ Reusable local skill repository for Codex and Agent Skills-compatible coding age
   Copies all repository skills into `~/.codex/skills` (PowerShell, Windows / Codex).
 - `scripts/sync-to-claude.sh`
   Copies all repository skills into `~/.claude/skills` (Bash, Linux / Claude Code).
+- `scripts/sync-to-ecc.sh`
+  Copies catalog and workflows into `~/.claude/skills/ecc` for ECC integration.
 - `scripts/skill-scaffold.sh`
   Generates a new skill skeleton with SKILL.md, agent metadata, and reference files.
 - `scripts/validate-skills.py`
@@ -79,6 +81,30 @@ Restart your agent tool so newly installed or updated skills are picked up.
 ```bash
 bash scripts/skill-scaffold.sh makis-digital-my-new-skill --description "What this skill does"
 ```
+
+## Quick commands
+
+```bash
+make validate          # Validate all skills
+make validate-links   # Validate markdown links
+make validate-all     # Both validations
+make sync-claude      # Sync to ~/.claude/skills
+make sync-ecc         # Sync to ECC catalog
+make scaffold NAME=x DESC="..."  # Scaffold a new skill
+```
+
+## Project files
+
+- `SKILL.md` — skill instructions
+- `agents/openai.yaml` — agent metadata
+- `references/` — detailed patterns and playbooks
+- `references/knowledge/` — shared project knowledge
+- `agents/` — reusable Claude Code agents (`makis-dev-agent`, `makis-security-agent`)
+- `.editorconfig` — editor consistency
+- `Makefile` — automation shortcuts
+- `CONTRIBUTING.md` — how to add skills
+- `.github/ISSUE_TEMPLATE/` — issue templates for skills and bugs
+- `.github/PULL_REQUEST_TEMPLATE.md` — PR template
 
 ## Validate locally
 

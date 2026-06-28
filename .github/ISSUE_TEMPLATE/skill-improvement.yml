@@ -1,0 +1,24 @@
+name: Skill Improvement
+description: Suggest an improvement to an existing skill
+title: "[Improve] "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill name
+      description: "e.g. makis-digital-security-review"
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What should be improved?
+      description: Missing workflow step, new gotcha, better rules, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why this improvement matters.
