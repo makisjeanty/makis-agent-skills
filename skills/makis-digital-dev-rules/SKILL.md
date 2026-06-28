@@ -108,3 +108,5 @@ Read [references/testing-playbook.md](references/testing-playbook.md) before sta
 - Use `$makis-digital-deployment` for build, release, and environment workflows.
 - Use `$makis-digital-logging-observability` for structured logging practices.
 - Use `$makis-digital-dependency-management` for Composer and package workflows.
+- Use `$makis-digital-idea-prompt-generator` to turn vague goals into concrete ideas and executable prompts.
+- Use `$makis-digital-expert-researcher` to investigate codebases, libraries, and architecture decisions before implementing.

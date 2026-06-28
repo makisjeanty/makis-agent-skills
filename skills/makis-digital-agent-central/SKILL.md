@@ -55,6 +55,8 @@ Use this skill as the **entry point** for any `makis-digital` task. It analyzes 
 | Spec writing (requirements → spec) | `makis-digital-specs` |
 | Knowledge capture / decisions | `makis-digital-memory` |
 | Post-change verification | `makis-digital-verification-loop` |
+| Idea generation / prompt building | `makis-digital-idea-prompt-generator` |
+| Codebase / library / architecture research | `makis-digital-expert-researcher` |
 
 ## Multi-skill chaining (sequential)
 
