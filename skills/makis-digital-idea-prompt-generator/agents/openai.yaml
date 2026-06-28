@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Idea Prompt Generator"
+  short_description: "Generate project ideas, feature ideas, and structured prompts for AI coding agents. Takes a domain or context and produces multiple concrete ideas with pros/cons, then generates executable prompts ready for makis-digital-agent-central."
+  default_prompt: "Use $makis-digital-idea-prompt-generator to TODO."

@@ -36,6 +36,8 @@
   Use for PSR-3 structured logging with levels, context, and security-aware practices.
 - `makis-digital-dependency-management`
   Use for Composer workflows, version policies, and security auditing.
+- `makis-digital-idea-prompt-generator`
+  Generate ideas and structured prompts for agent-central from vague goals.
 
 ## Starter bundles
 
@@ -55,3 +57,5 @@
   Start with `makis-digital-api-patterns`, then `makis-digital-error-handling`, then `makis-digital-testing-strategy`.
 - `production-readiness`
   Start with `makis-digital-deployment`, then `makis-digital-logging-observability`, then `makis-digital-dependency-management`.
+- `idea-to-feature`
+  Start with `makis-digital-idea-prompt-generator`, then `makis-digital-agent-central` to execute.

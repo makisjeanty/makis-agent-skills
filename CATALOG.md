@@ -38,6 +38,8 @@ This is the local catalog for reusable agent guidance in this skill repository.
   Add structured PSR-3 logging with appropriate levels and security-aware context.
 - `makis-digital-dependency-management`
   Manage Composer packages with version policies, security audits, and update workflows.
+- `makis-digital-idea-prompt-generator`
+  Turn vague goals into concrete ideas and ready-to-execute prompts for agent-central.
 
 ## Starter bundles
 
@@ -57,6 +59,8 @@ This is the local catalog for reusable agent guidance in this skill repository.
   Start with `makis-digital-api-patterns` for endpoint design, then `makis-digital-error-handling`, then `makis-digital-testing-strategy` for coverage.
 - `production-readiness`
   Start with `makis-digital-deployment` for release workflow, then `makis-digital-logging-observability`, then `makis-digital-dependency-management` for audit.
+- `idea-to-feature`
+  Start with `makis-digital-idea-prompt-generator` to refine the idea and build the prompt, then `makis-digital-agent-central` to execute.
 
 ## Orchestration
 
