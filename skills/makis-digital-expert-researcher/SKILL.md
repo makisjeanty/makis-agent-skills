@@ -3,7 +3,7 @@ name: makis-digital-expert-researcher
 description: Specialist researcher for codebases, technologies, libraries, and architecture decisions. Investigates existing code, explores patterns, researches libraries and APIs, and produces evidence-backed recommendations before implementation. Use before any major implementation or integration decision.
 license: MIT
 metadata:
-  maintainer: makis-jeanty
+  maintainer: JEANMAKISJEANTY
   version: "0.1.0"
   scope: project-and-global
   environment: Designed for Codex and Agent Skills-compatible coding agents that need evidence before acting.

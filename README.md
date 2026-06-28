@@ -118,7 +118,7 @@ Then restart Claude Code. The agents will appear in the agent selector.
 
 | Agent | Purpose |
 |---|---|
-| `makis-dev-agent` | Full-stack PHP dev using all 17 skills |
+| `makis-dev-agent` | Full-stack PHP dev using all 19 skills |
 | `makis-security-agent` | Security specialist for reviews and hardening |
 
 ## Validate locally
