@@ -29,7 +29,7 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+REPO_ROOT="${REPO_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 SKILL_DIR="$REPO_ROOT/skills/$SKILL_NAME"
 
 # Validate skill name format

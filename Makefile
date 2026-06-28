@@ -1,4 +1,4 @@
-.PHONY: help validate validate-links sync sync-claude sync-ecc scaffold clean
+.PHONY: help validate validate-links sync sync-claude sync-ecc scaffold clean test test-python test-shell
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
@@ -20,6 +20,14 @@ sync-ecc: ## Sync skill catalog and workflows to ~/.claude/skills/ecc
 scaffold: ## Scaffold a new skill: make scaffold NAME=my-new-skill DESC="description"
 	@if [ -z "$(NAME)" ]; then echo "Usage: make scaffold NAME=skill-name DESC=\"description\""; exit 1; fi
 	bash scripts/skill-scaffold.sh makis-digital-$(NAME) --description "$(DESC)"
+
+test: test-python test-shell ## Run all tests
+
+test-python: ## Run Python unit tests
+	pytest tests/ -v
+
+test-shell: ## Run BATS shell tests
+	bats tests/test_skill_scaffold.bats tests/test_sync_scripts.bats
 
 clean: ## Remove pycache and temp files
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
