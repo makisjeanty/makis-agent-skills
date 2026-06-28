@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Frontend Patterns"
+  short_description: "PHP views and frontend conventions"
+  default_prompt: "Use $makis-digital-frontend-patterns to build or refactor frontend templates with proper escaping, form handling, and accessible markup."

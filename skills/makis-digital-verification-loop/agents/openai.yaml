@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Verification Loop"
+  short_description: "Post-change safety verification"
+  default_prompt: "Use $makis-digital-verification-loop to verify this makis-digital change with builds, tests, security review, and diff review before closing."

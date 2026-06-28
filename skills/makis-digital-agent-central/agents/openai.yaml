@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Agent Central"
+  short_description: "Orchestrator for all makis-digital skills"
+  default_prompt: "Use $makis-digital-agent-central to analyze this task, select the right specialized skills, and orchestrate the full workflow from analysis to verification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Logging and Observability"
+  short_description: "PHP logging and observability"
+  default_prompt: "Use $makis-digital-logging-observability to add structured logging to this feature with appropriate levels, context, and safe data practices."

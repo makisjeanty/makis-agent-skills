@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Specs"
+  short_description: "Requirements-to-specs translator"
+  default_prompt: "Use $makis-digital-specs to translate this feature request into a structured technical specification before implementation."

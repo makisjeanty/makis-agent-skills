@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Deployment"
+  short_description: "PHP deployment and release workflows"
+  default_prompt: "Use $makis-digital-deployment to set up or review deployment workflows, health checks, environment config, and rollback procedures."

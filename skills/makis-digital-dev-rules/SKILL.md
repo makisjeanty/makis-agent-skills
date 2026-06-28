@@ -92,6 +92,19 @@ Read [references/testing-playbook.md](references/testing-playbook.md) before sta
 
 ## Specialized skills
 
+- Use `$makis-digital-agent-central` as the first skill when the task scope is unclear or spans multiple concerns.
+- Use `$makis-digital-specs` to translate requirements into technical specifications before coding.
 - Use `$makis-digital-crud-refactor` for CRUD reorganization and modularization.
 - Use `$makis-digital-security-review` for security review and hardening work.
 - Use `$makis-digital-test-first-bugfix` for regressions and bug fixes with TDD.
+- Use `$makis-digital-ai-integration` for AI SDK integration with secure wrappers.
+- Use `$makis-digital-database-patterns` for persistence and query design.
+- Use `$makis-digital-memory` to capture decisions and reusable patterns.
+- Use `$makis-digital-verification-loop` for post-change verification.
+- Use `$makis-digital-api-patterns` for REST API design and contracts.
+- Use `$makis-digital-error-handling` for consistent exception and error patterns.
+- Use `$makis-digital-testing-strategy` to plan test coverage levels.
+- Use `$makis-digital-frontend-patterns` for PHP views, forms, and frontend conventions.
+- Use `$makis-digital-deployment` for build, release, and environment workflows.
+- Use `$makis-digital-logging-observability` for structured logging practices.
+- Use `$makis-digital-dependency-management` for Composer and package workflows.

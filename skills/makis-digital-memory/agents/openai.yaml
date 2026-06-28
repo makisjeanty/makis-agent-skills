@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Memory"
+  short_description: "Project knowledge capture and retrieval"
+  default_prompt: "Use $makis-digital-memory to capture decisions, patterns, or architecture knowledge from this makis-digital task so future agents can reuse them."

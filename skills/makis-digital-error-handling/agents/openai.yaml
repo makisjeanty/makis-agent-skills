@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Error Handling"
+  short_description: "Consistent PHP error handling"
+  default_prompt: "Use $makis-digital-error-handling to design error handling for this feature with typed exceptions, safe messages, and proper logging."

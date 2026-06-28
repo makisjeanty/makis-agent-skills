@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Testing Strategy"
+  short_description: "Test planning and coverage"
+  default_prompt: "Use $makis-digital-testing-strategy to plan test coverage for this feature, deciding what to test at each level (unit, integration, e2e)."

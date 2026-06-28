@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Dependency Management"
+  short_description: "Composer and PHP dependency workflows"
+  default_prompt: "Use $makis-digital-dependency-management to review, add, or update PHP dependencies with proper versioning, security checks, and testing."

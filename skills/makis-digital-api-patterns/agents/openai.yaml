@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital API Patterns"
+  short_description: "REST API design for PHP"
+  default_prompt: "Use $makis-digital-api-patterns to design or refactor API endpoints with consistent envelopes, auth, pagination, and error responses."

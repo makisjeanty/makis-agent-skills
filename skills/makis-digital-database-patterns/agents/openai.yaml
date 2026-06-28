@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Database Patterns"
+  short_description: "PHP persistence and query patterns"
+  default_prompt: "Use $makis-digital-database-patterns to design or refactor persistence for this makis-digital feature with clean repositories, safe queries, and proper migrations."

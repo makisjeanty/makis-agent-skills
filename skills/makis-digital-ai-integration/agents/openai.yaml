@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital AI Integration"
+  short_description: "Secure AI SDK integration for PHP"
+  default_prompt: "Use $makis-digital-ai-integration to add AI capabilities to this makis-digital feature with secure SDK wrappers, structured output handling, and proper error handling."
