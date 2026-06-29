@@ -1,5 +1,8 @@
 # Security Baseline
 
-- CSRF is present for browser forms.
-- Session bootstrap, auth, validation, output encoding, rate limiting, and JWT support already exist.
-- Current reviews should preserve those controls and add denial-path tests where missing.
+- Session bootstrap is configured in `public/index.php`.
+- CSRF uses `src/Security/CsrfToken.php`.
+- Auth uses `src/Security/Auth.php`.
+- Validation and output encoding are centralized in `src/Security`.
+- API auth uses JWT support in `src/Security/JwtToken.php`.
+- Browser mutations should keep CSRF protection.

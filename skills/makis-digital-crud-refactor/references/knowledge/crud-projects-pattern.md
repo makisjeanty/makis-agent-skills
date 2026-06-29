@@ -1,5 +1,7 @@
 # Projects CRUD Pattern
 
-- `projects` is the current reference CRUD flow for this project.
-- Router, admin controller, page controller, project controller, API controller, views, and tests are the main touch points.
-- Next clean-code step is extracting repository and service layers for projects.
+- Web CRUD is routed through `config/routes.php`.
+- Admin CRUD is currently handled in `src/Controllers/AdminController.php`.
+- Public listing uses `PageController` and `ProjectController`.
+- API CRUD is handled in `src/Controllers/ApiController.php`.
+- Current next refactor target is repository plus service extraction for the `projects` flow.

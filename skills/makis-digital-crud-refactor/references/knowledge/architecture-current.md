@@ -1,5 +1,9 @@
 # Current Architecture
 
-- Active runtime code lives in `src/`.
-- CRUD changes usually touch `config/routes.php`, controllers in `src/Controllers`, templates in `views/`, and tests in `tests/`.
-- Persistence is currently JSON-backed through `src/Database/Database.php`.
+- Active runtime code lives in `src/`, not `app/`.
+- Entry point is `public/index.php`.
+- Routes are registered in `config/routes.php`.
+- Templates live in `views/`.
+- Tests live in `tests/`.
+- Security utilities live in `src/Security`.
+- Persistence currently uses a JSON-backed storage layer behind SQL-like methods in `src/Database`.
