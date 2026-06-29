@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+REPO_ROOT="${REPO_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 ECC_DIR="${ECC_DIR:-$HOME/.claude/skills/ecc}"
 
 if [ ! -d "$ECC_DIR" ]; then
@@ -13,17 +13,19 @@ if [ ! -d "$ECC_DIR" ]; then
   exit 1
 fi
 
-# Sync CATALOG.md as an ECC-readable skill index
-cp "$REPO_ROOT/CATALOG.md" "$ECC_DIR/makis-agent-catalog.md"
-echo "Synced CATALOG.md -> $ECC_DIR/makis-agent-catalog.md"
+_sync_file() {
+  local src="$1" dest="$2" label="$3"
+  if [ ! -f "$src" ]; then
+    echo "Error: Source file not found: $src" >&2
+    exit 1
+  fi
+  cp "$src" "$dest"
+  echo "Synced $label -> $dest"
+}
 
-# Sync WORKFLOWS.md as an ECC-readable workflow reference
-cp "$REPO_ROOT/WORKFLOWS.md" "$ECC_DIR/makis-agent-workflows.md"
-echo "Synced WORKFLOWS.md -> $ECC_DIR/makis-agent-workflows.md"
-
-# Sync CONTRIBUTING.md for reference
-cp "$REPO_ROOT/CONTRIBUTING.md" "$ECC_DIR/makis-agent-contributing.md"
-echo "Synced CONTRIBUTING.md -> $ECC_DIR/makis-agent-contributing.md"
+_sync_file "$REPO_ROOT/CATALOG.md"      "$ECC_DIR/makis-agent-catalog.md"      "CATALOG.md"
+_sync_file "$REPO_ROOT/WORKFLOWS.md"    "$ECC_DIR/makis-agent-workflows.md"    "WORKFLOWS.md"
+_sync_file "$REPO_ROOT/CONTRIBUTING.md" "$ECC_DIR/makis-agent-contributing.md" "CONTRIBUTING.md"
 
 echo ""
 echo "Done. ECC catalog updated."
