@@ -26,11 +26,11 @@ scaffold: ## Scaffold a new skill: make scaffold NAME=my-new-skill DESC="descrip
 
 test: test-python test-shell ## Run all tests
 
-test-python: ## Run Python unit tests
-	pytest tests/ -v
+test-python: ## Run Python unit tests with coverage (fails if < 100%)
+	python -m pytest tests/ -v --cov=scripts --cov-report=term-missing --cov-fail-under=100
 
 test-shell: ## Run BATS shell tests
-	bats tests/test_skill_scaffold.bats tests/test_sync_scripts.bats
+	bats tests/test_skill_scaffold.bats tests/test_sync_scripts.bats tests/test_sync_knowledge.bats
 
 clean: ## Remove pycache and temp files
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true

@@ -22,8 +22,8 @@ jobs:
       - name: Install test dependencies
         run: pip install -r requirements-dev.txt
 
-      - name: Run Python unit tests
-        run: pytest tests/ -v --tb=short
+      - name: Run Python unit tests with coverage
+        run: python -m pytest tests/ -v --tb=short --cov=scripts --cov-report=term-missing --cov-fail-under=100
 
   shell-tests:
     runs-on: ubuntu-latest

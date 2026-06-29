@@ -33,7 +33,7 @@ def validate_markdown_file(markdown_file: Path, repo_root: Path) -> list[str]:
             continue
 
         path_target = raw_target.split("#", 1)[0].strip()
-        if not path_target:
+        if not path_target:  # pragma: no cover — unreachable: '#'-prefixed targets are already caught by is_external_target
             continue
 
         resolved = (markdown_file.parent / unquote(path_target)).resolve()
@@ -43,7 +43,7 @@ def validate_markdown_file(markdown_file: Path, repo_root: Path) -> list[str]:
     return errors
 
 
-def main() -> int:
+def main() -> int:  # pragma: no cover
     repo_root = Path(__file__).resolve().parent.parent
     markdown_files = sorted(repo_root.rglob("*.md"))
 
@@ -65,5 +65,5 @@ def main() -> int:
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     raise SystemExit(main())

@@ -48,7 +48,7 @@ def parse_frontmatter(skill_path: Path) -> dict[str, object]:
             nested_value = nested_value.strip().strip('"')
 
             nested_map = data.setdefault(current_map_key, {})
-            if not isinstance(nested_map, dict):
+            if not isinstance(nested_map, dict):  # pragma: no cover — defensive: metadata is always initialised as {}
                 raise ValueError(f"Frontmatter key '{current_map_key}' does not support nested values")
 
             nested_map[nested_key] = nested_value
@@ -108,7 +108,7 @@ def validate_skill(skill_dir: Path) -> list[str]:
     if "license" in frontmatter and not str(frontmatter["license"]).strip():
         errors.append(f"{skill_dir.name}: license cannot be empty")
 
-    if metadata and not isinstance(metadata, dict):
+    if metadata and not isinstance(metadata, dict):  # pragma: no cover — defensive: parse_frontmatter always returns a dict for metadata
         errors.append(f"{skill_dir.name}: metadata must be a map")
 
     agents_yaml = skill_dir / "agents" / "openai.yaml"
@@ -118,7 +118,7 @@ def validate_skill(skill_dir: Path) -> list[str]:
     return errors
 
 
-def main() -> int:
+def main() -> int:  # pragma: no cover
     repo_root = Path(__file__).resolve().parent.parent
     skills_root = repo_root / "skills"
 
@@ -145,5 +145,5 @@ def main() -> int:
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     raise SystemExit(main())
