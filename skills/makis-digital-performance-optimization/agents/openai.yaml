@@ -1,0 +1,4 @@
+interface:
+  display_name: "Makis Digital Performance Optimization"
+  short_description: "Profile, diagnose, and fix PHP performance issues: slow queries, N+1 problems, missing indexes, and caching."
+  default_prompt: "Use $makis-digital-performance-optimization to profile and optimize the slow path. Start by measuring the baseline (query count, response time), identify the root cause, then apply the smallest effective fix."

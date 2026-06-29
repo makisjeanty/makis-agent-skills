@@ -42,6 +42,8 @@ This is the local catalog for reusable agent guidance in this skill repository.
   Turn vague goals into concrete ideas and ready-to-execute prompts for agent-central.
 - `makis-digital-expert-researcher`
   Investigate codebases, patterns, libraries, and architectures before implementing.
+- `makis-digital-performance-optimization`
+  Profile slow paths, fix N+1 queries, add caching, and tune PHP and MySQL performance.
 
 ## Starter bundles
 
@@ -65,6 +67,8 @@ This is the local catalog for reusable agent guidance in this skill repository.
   Start with `makis-digital-idea-prompt-generator` to refine the idea and build the prompt, then `makis-digital-agent-central` to execute.
 - `research-first`
   Start with `makis-digital-expert-researcher` to investigate architecture and patterns, then `makis-digital-agent-central` to implement based on findings.
+- `performance-fix`
+  Start with `makis-digital-performance-optimization` to profile and fix the slow path, then `makis-digital-database-patterns` if persistence changes are needed, and finish with `makis-digital-verification-loop`.
 
 ## Orchestration
 
