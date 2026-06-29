@@ -40,6 +40,8 @@
   Generate ideas and structured prompts for agent-central from vague goals.
 - `makis-digital-expert-researcher`
   Research codebases, patterns, and libraries before implementing.
+- `makis-digital-performance-optimization`
+  Profile slow paths, fix N+1 queries, add caching, and tune PHP and MySQL performance.
 
 ## Starter bundles
 
@@ -63,3 +65,5 @@
   Start with `makis-digital-idea-prompt-generator`, then `makis-digital-agent-central` to execute.
 - `research-first`
   Start with `makis-digital-expert-researcher`, then `makis-digital-agent-central` to implement.
+- `performance-fix`
+  Start with `makis-digital-performance-optimization` to profile and fix, then `makis-digital-database-patterns` if schema changes, and finish with `makis-digital-verification-loop`.
