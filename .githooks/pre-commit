@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Pre-commit hook: validates skills/docs and runs tests before every commit.
+# Install once with: make install-hooks
+
+set -euo pipefail
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
+fail() { echo -e "${RED}✗ $*${NC}" >&2; exit 1; }
+ok()   { echo -e "${GREEN}✓ $*${NC}"; }
+warn() { echo -e "${YELLOW}! $*${NC}"; }
+
+echo "Running pre-commit checks..."
+echo ""
+
+# 1. Skill frontmatter + structure
+python3 scripts/validate-skills.py \
+  && ok "validate-skills" \
+  || fail "validate-skills failed — fix errors above before committing"
+
+# 2. Markdown links
+python3 scripts/validate-markdown-links.py \
+  && ok "validate-markdown-links" \
+  || fail "validate-markdown-links failed — fix broken links before committing"
+
+# 3. Python unit tests with coverage
+python -m pytest tests/ -q --cov=scripts --cov-report=term-missing --cov-fail-under=100 \
+  && ok "pytest (100% coverage)" \
+  || fail "Python tests failed — fix before committing"
+
+# 4. Shell tests (skipped gracefully if bats is not installed)
+if command -v bats &>/dev/null; then
+  bats tests/test_skill_scaffold.bats tests/test_sync_scripts.bats tests/test_sync_knowledge.bats \
+    && ok "bats shell tests" \
+    || fail "Shell tests failed — fix before committing"
+else
+  warn "bats not found — skipping shell tests (run: make test-shell)"
+fi
+
+echo ""
+echo -e "${GREEN}All checks passed.${NC}"

@@ -2,6 +2,17 @@
 
 Thanks for contributing to `makis-agent-skills`!
 
+## Setup (run once after cloning)
+
+```bash
+make install-hooks
+pip install -r requirements-dev.txt
+```
+
+This installs a pre-commit hook that automatically runs `validate-all` and the
+Python test suite (with 100% coverage check) before every commit. Shell tests
+also run if `bats` is available.
+
 ## Adding a new skill
 
 1. **Scaffold** the skill structure:

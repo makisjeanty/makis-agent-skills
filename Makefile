@@ -1,4 +1,4 @@
-.PHONY: help validate validate-links sync sync-claude sync-ecc sync-knowledge scaffold clean test test-python test-shell
+.PHONY: help validate validate-links sync sync-claude sync-ecc sync-knowledge scaffold clean test test-python test-shell install-hooks
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
@@ -31,6 +31,11 @@ test-python: ## Run Python unit tests with coverage (fails if < 100%)
 
 test-shell: ## Run BATS shell tests
 	bats tests/test_skill_scaffold.bats tests/test_sync_scripts.bats tests/test_sync_knowledge.bats
+
+install-hooks: ## Install git pre-commit hook (run once after cloning)
+	git config core.hooksPath .githooks
+	chmod +x .githooks/pre-commit
+	@echo "Pre-commit hook installed. It will run validate-all + tests before every commit."
 
 clean: ## Remove pycache and temp files
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
